@@ -1,0 +1,23 @@
+Configurando CPU Afinity
+
+
+Olá iremos configurar o CPU Afinity para uma melhor distribuções de processos entre os processadores atuais das maquina.
+
+1° Passo iremos verificar o PID do processo do serviço HTTP
+	#pidof httpd
+
+
+2º Passo iremos definir a numeração do processo para a CPU desejada.
+ 	 #taskset <Options> <Numbercpu> <NumberPID>
+	 #taskset -cp 0,1 4212
+
+
+
+
+############## LINKS RELEVANTES ####################
+
+https://www.linkedin.com/pulse/cpu-isolation-affinity-linux-vinit-tirnagarwar/
+https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_monitoring_and_updating_the_kernel/assembly_configuring-cpu-affinity-and-numa-policies-using-systemd_managing-monitoring-and-updating-the-kernel
+
+
+
